@@ -77,11 +77,21 @@ function CheckNaturalObject() {
 
 let sum;
 function lengthForWord1(){
-    let first = document.getElementById('myMesseg')
-    let second = document.getElementById('myMesseg2')
-    let third = document.getElementById('myMesseg3')
-    let messeg = first.getElementsByTagName('li').length + second.getElementsByTagName('li').length + third.getElementsByTagName('li').length ;
-    console.log(messeg);
+    let first = document.querySelectorAll('ul>li')
+    for (let i = 0; i < first.length; i++) {
+        first[i].innerHTML = 'Hi';
+        first[i+1].innerHTML = 'Bro'
+        first[i+2].innerHTML = 'It\'s'
+        first[i+3].innerHTML = 'My'
+        first[i+4].innerHTML = 'Cool'
+        first[i+5].innerHTML = 'Life'
+        first[i+6].innerHTML = 'Keep a sharp eye'
+        break;
+    }
+    for (let i = 0; i< first.length; i++) {
+        first[i].classList.add('colorForMesseger')
+    }
+    
 };
 
 
